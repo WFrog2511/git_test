@@ -2,30 +2,137 @@
 <html lang="jp">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="WFrog2511" />
     <title>タイトル -ブラウザのタブに表示される-</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <article>
-      <h1>話題A -h1-</h1>
+    <h1>話題A -h1-</h1>
 
-      <h2>話題Aに関する事a -h2-</h2>
-      <p>事aについての文章の1段落目 -p-</p>
-      <p>事aについての文章の2段落目 -p-</p>
+    <h2>話題Aに関する事a -h2-</h2>
+    <p>事aについての文章の1段落目 -p-</p>
+    <p>事aについての文章の2段落目 -p-</p>
 
-      <h2>話題Aに関する事b -h2-</h2>
-      <h3>事bに関する事c -h3-</h3>
-      <p>下の箇条書きの説明文 -p-</p>
-      <ul>
-        <li>1要素目 -li-</li>
-        <li>2要素目 -li-</li>
-        <li>3要素目 -li-</li>
-      </ul>
-      <h3>事bに関する事d</h3>
+    <h2>話題Aに関する事b -h2-</h2>
+    <h3>事bに関する事c -h3-</h3>
+    <p>下の箇条書きの説明文 -p-</p>
+    <ul>
+      <li>1要素目 -li-</li>
+      <li>2要素目 -li-</li>
+      <li>3要素目 -li-</li>
+    </ul>
+    <h3>事bに関する事d</h3>
+    <p>
+      事dについての文章に出る
+      <abbr title="短く省略された語">略語</abbr> -abbr-
+    </p>
+
+    <h1>HTMLの機能</h1>
+    <h2>文書の定義</h2>
+    <p>
+      HTMLは、各種要素で文書の各文字列が何を意味するか や
+      重要性、文書ファイルの形式などを定義する。
+      例としては、head要素内のmeta要素では文書ファイルの作者や文字コードを定義できる。
+      また、文書内の見出しはh要素を用いることで定義される。
+    </p>
+    <h2>単語の強調</h2>
+    <p>
+      HTMLでは、<abbr title="emphasis">em</abbr
+      >要素を用いることで文の一部を<em>強調</em>できる。
+      また、strong要素を用いた場合、「<strong
+        >注意:カエルを触った手で目をこすると炎症する恐れがあります。</strong
+      >
+      」のような重要度や緊急性の高い情報であることを示すことができます。
+      逆にメインの文章の内容ではない著作権表記や免責事項、ライセンスの帰属表示など小さく表示するべきことはsmall要素とする。<small
+        >(フッターに表記された著作権表記もsmall要素としています)</small
+      >
+    </p>
+
+    <h2>コンピュータやユーザーのための情報付与</h2>
+    <p>
+      HTMLはそれぞれの要素を識別するために、タグを付与する。
+      これによって、ユーザーのみならず、
+      コンピュータも文書の各部位が何を表すのかが分かる。
+      「文書の定義」で述べた内容も近いが、この他にtime要素などもある。
+      time要素は「<time datetime="02-01">二月一日</time>」のような
+      コンピュータが理解できないフォーマットの日時情報をHTMLファイル内に書き入れることが可能である。
+    </p>
+
+    <h2>箇条書き/表/画像等の挿入</h2>
+    <h3><abbr title="unordered list">ul</abbr>要素</h3>
+    <p>
+      箇条書きの項目一つ一つは、li要素でマークアップする。
+      そして、li要素の集まりをul要素とすると、以下のような箇条書きとなる。
+    </p>
+    <ul>
+      <li>項目1</li>
+      <li>項目2</li>
+      <li>項目3</li>
+    </ul>
+
+    <h3><abbr title="ordered list">ol</abbr>要素</h3>
+    <p>ol要素とすると、以下のような箇条書きとなる。</p>
+    <ol>
+      <li>項目1</li>
+      <li>項目2</li>
+      <li>項目3</li>
+    </ol>
+    <p>
+      また、ol要素の番号は逆順や開始番号を設定することや、
+      番号以外のものを添え字にすること、入れ子の箇条書きもできる。
+    </p>
+    <ol reversed start="5">
+      <li>項目1</li>
+      <li>項目2</li>
+      <li>項目3</li>
+    </ol>
+    <ol type="A">
+      <li>
+        <ol type="a">
+          <li>項目1-1</li>
+          <li>項目1-2</li>
+          <li>項目1-3</li>
+        </ol>
+      </li>
+      <li>項目2</li>
+      <li>
+        type="I"としたol要素
+        <ol type="I">
+          <li>項目3-1</li>
+          <li>項目3-2</li>
+          <ol type="i">
+            <li>項目3-3-1</li>
+            <li>項目3-3-2</li>
+            <li>項目3-3-3</li>
+          </ol>
+        </ol>
+      </li>
+    </ol>
+
+    <h3><abbr title="description list">dl</abbr>要素</h3>
+    <p>
+      dl要素は、説明リストをマークアップできる。
+      <abbr title="description listのterm">dt</abbr>要素で項目名を定義し、
+      <abbr title="description listのdescriptionまたはdefinition">dd</abbr>要素
+    </p>
+    <dl>
+      <dt>項目名1</dt>
+      <dd>項目名1の説明</dd>
+      <dt>項目名2</dt>
+      <dd>項目名2の説明1</dd>
+      <dd>項目名2の説明2</dd>
+    </dl>
+
+    <h1>JavaScriptを用いた機能</h1>
+    <h2>入力形式の制限 と 未入力項目の指摘</h2>
+    <form><input /></form>
+
+    <footer>
       <p>
-        事dについての文章に出る
-        <abbr title="短く省略された語">略語</abbr> -abbr-
+        〒100-2100<br />
+        東京都小笠原村沖ノ鳥島
       </p>
-    </article>
+      <p><small>&copy; WFrog2511 2023 / All right reserved.</small></p>
+    </footer>
   </body>
 </html>
