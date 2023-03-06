@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <h1>話題A -h1-</h1>
+    <h1 id="titleA">話題A -h1-</h1>
 
     <h2>話題Aに関する事a -h2-</h2>
     <p>事aについての文章の1段落目 -p-</p>
@@ -122,6 +122,41 @@
       <dd>項目名2の説明1</dd>
       <dd>項目名2の説明2</dd>
     </dl>
+
+    <h3><abbr title="anchor">a</abbr>要素</h3>
+    <p>
+      HTMLといえば、リンクである。このリンクをマークアップするのが、a要素である。
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://github.com/WFrog2511" target="_blank" rel="author"
+          >WFrog2511のGitHub(外部リンク)</a
+        >
+      </li>
+      <li>
+        <a href="./emptyPage.html">何もない</a>
+      </li>
+      <li>
+        <a href="#titleA">話題A</a>
+      </li>
+    </ul>
+
+    <h3>img要素</h3>
+    <p>
+      読み込み速度が驚異的な阿部寛のWebページでさえ、画像は埋め込まれている。画像は、img要素によってマークアップされる。
+      img要素はa要素に含めることでリンクにもできる。
+      また、width属性とheight属性を指定することで、画像を横に引き延ばすことも可能だ。
+    </p>
+    <a href="https://github.com/WFrog2511" target="_blank">
+      <img src="./image/WFrog_icon.png" alt="WFrog2511のアイコン" />
+    </a>
+    <img
+      src="./image/WFrog_icon.png"
+      width="500"
+      height="100"
+      alt="横に引き延ばされたWFrog2511のアイコン"
+    />
 
     <h1>JavaScriptを用いた機能</h1>
     <h2>入力形式の制限 と 未入力項目の指摘</h2>
