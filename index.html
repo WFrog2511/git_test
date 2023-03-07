@@ -31,8 +31,8 @@
     <h2>文書の定義</h2>
     <p>
       HTMLは、各種要素で文書の各文字列が何を意味するか や
-      重要性、文書ファイルの形式などを定義する。
       例としては、head要素内のmeta要素では文書ファイルの作者や文字コードを定義できる。
+      重要性、文書ファイルの形式などを定義する。
       また、文書内の見出しはh要素を用いることで定義される。
     </p>
     <h2>単語の強調</h2>
@@ -148,15 +148,151 @@
       img要素はa要素に含めることでリンクにもできる。
       また、width属性とheight属性を指定することで、画像を横に引き延ばすことも可能だ。
     </p>
-    <a href="https://github.com/WFrog2511" target="_blank">
-      <img src="./image/WFrog_icon.png" alt="WFrog2511のアイコン" />
-    </a>
-    <img
-      src="./image/WFrog_icon.png"
-      width="500"
-      height="100"
-      alt="横に引き延ばされたWFrog2511のアイコン"
-    />
+    <figure>
+      <a href="https://github.com/WFrog2511" target="_blank">
+        <img src="./image/WFrog_icon.png" alt="" decoding="async" />
+      </a>
+      <img src="./image/WFrog_icon.png" width="500" height="100" alt="" />
+    </figure>
+
+    <h3>video要素</h3>
+    <p>
+      video要素を用いると以下のように、Webページ内に動画を埋め込むことも可能である。
+    </p>
+    <video loop autoplay width="800px">
+      <source src="./video/3d_animation.mp4" type="video/mp4" />
+      &gt;お使いのブラウザは埋め込み動画をサポートしていません&lt;
+    </video>
+
+    <h3><abbr title="inline frame">iframe</abbr>要素</h3>
+    <p>
+      iframe要素は、PDFや他のWebページ、Youtubeの動画などをWebページ埋め込むことができる。
+    </p>
+    <iframe src="./pdf/gimp.pdf" title="Gimpで作成したPDFファイル"></iframe>
+
+    <h3>表の挿入</h3>
+    <p>
+      表には、table要素を用います。さらに、表内の各行には<abbr title="table row"
+        >tr</abbr
+      >要素を用い、 表の見出しセル(最も上の行のセル)には<abbr
+        title="table header cell"
+        >th</abbr
+      >要素を用い、 その他のセルには<abbr title="table data cell">td</abbr
+      >要素を用いる。
+    </p>
+    <table>
+      <caption>
+        テーブルのキャプション
+      </caption>
+      <thead>
+        <tr>
+          <th>見出しのセル1</th>
+          <th>見出しのセル2</th>
+          <th>見出しのセル3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>内容セル1-1</td>
+          <td>内容セル1-2</td>
+          <td>内容セル1-3</td>
+        </tr>
+        <tr>
+          <td>内容セル2-1</td>
+          <td colspan="2">------内容セル2-23(2列分)-----</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">-----フッターのセル-----</td>
+          <td>フッターのセル</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2>入力フォーム</h2>
+    <p>
+      HTMLでは、前述した画像などの他に以下のような入力フォームを作ることも可能だ。
+    </p>
+    <form action="" method="post">
+      <p>
+        <label
+          >テキスト<input type="text" placeholder="プレースホルダー"
+        /></label>
+      </p>
+      <input type="password" />
+      <input type="tel" />
+      <input type="url" />
+      <input type="email" />
+      <input type="search" />
+      <input type="datetime-local" />
+      <input type="date" />
+      <input type="month" />
+      <input type="week" />
+      <input type="time" />
+      <input type="number" />
+      <input type="range" />
+      <input type="color" />
+      <input type="radio" />A <input type="radio" />B <input type="radio" />C
+      <input type="checkbox" />
+      <input type="submit" />
+      <input type="reset" />
+      <input type="button" />
+      <input type="image" src="./image/WFrog_icon.png" alt="WFrog_button" />
+      <input type="file" />
+      <input type="hidden" />
+      <p>
+        <label>
+          テキストエリア<br />
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="テキストエリア"
+            required
+          >
+メッセージ</textarea
+          ><br />
+        </label>
+
+        <label>
+          セレクト<br />
+          <select name="area">
+            <optgroup label="ラベルグループ1">
+              <option value="1-1">選択肢1</option>
+              <option value="1-2" selected>選択肢2</option>
+              <option value="1-3">選択肢3</option>
+              <option value="1-4">選択肢4</option>
+            </optgroup>
+            <optgroup label="ラベルグループ2">
+              <option value="2-1">選択肢1</option>
+              <option value="2-2" selected>選択肢2</option>
+              <option value="2-3">選択肢3</option>
+              <option value="2-4">選択肢4</option>
+            </optgroup>
+          </select>
+          <br />
+        </label>
+
+        <label>
+          複数セレクト<br />
+          <select name="area" multiple>
+            <optgroup label="ラベルグループ1">
+              <option value="1-1">選択肢1</option>
+              <option value="1-2" selected>選択肢2</option>
+              <option value="1-3">選択肢3</option>
+              <option value="1-4">選択肢4</option>
+            </optgroup>
+            <optgroup label="ラベルグループ2">
+              <option value="2-1">選択肢1</option>
+              <option value="2-2" selected>選択肢2</option>
+              <option value="2-3">選択肢3</option>
+              <option value="2-4">選択肢4</option>
+            </optgroup>
+          </select>
+        </label>
+      </p>
+    </form>
 
     <h1>JavaScriptを用いた機能</h1>
     <h2>入力形式の制限 と 未入力項目の指摘</h2>
