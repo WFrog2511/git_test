@@ -7,297 +7,327 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <h1 id="titleA">話題A -h1-</h1>
+    <section>
+      <h1 id="titleA">話題A -h1-</h1>
+      <section>
+        <h2>話題Aに関する事a -h2-</h2>
+        <p>事aについての文章の1段落目 -p-</p>
+        <p>事aについての文章の2段落目 -p-</p>
+      </section>
+      <section>
+        <h2>話題Aに関する事b -h2-</h2>
+        <section>
+          <h3>事bに関する事c -h3-</h3>
+          <p>下の箇条書きの説明文 -p-</p>
+          <ul>
+            <li>1要素目 -li-</li>
+            <li>2要素目 -li-</li>
+            <li>3要素目 -li-</li>
+          </ul>
+        </section>
+        <section>
+          <h3>事bに関する事d</h3>
+          <p>
+            事dについての文章に出る
+            <abbr title="短く省略された語">略語</abbr> -abbr-
+          </p>
+        </section>
+      </section>
+    </section>
 
-    <h2>話題Aに関する事a -h2-</h2>
-    <p>事aについての文章の1段落目 -p-</p>
-    <p>事aについての文章の2段落目 -p-</p>
-
-    <h2>話題Aに関する事b -h2-</h2>
-    <h3>事bに関する事c -h3-</h3>
-    <p>下の箇条書きの説明文 -p-</p>
-    <ul>
-      <li>1要素目 -li-</li>
-      <li>2要素目 -li-</li>
-      <li>3要素目 -li-</li>
-    </ul>
-    <h3>事bに関する事d</h3>
-    <p>
-      事dについての文章に出る
-      <abbr title="短く省略された語">略語</abbr> -abbr-
-    </p>
-
-    <h1>HTMLの機能</h1>
-    <h2>文書の定義</h2>
-    <p>
-      HTMLは、各種要素で文書の各文字列が何を意味するか や
-      例としては、head要素内のmeta要素では文書ファイルの作者や文字コードを定義できる。
-      重要性、文書ファイルの形式などを定義する。
-      また、文書内の見出しはh要素を用いることで定義される。
-    </p>
-    <h2>単語の強調</h2>
-    <p>
-      HTMLでは、<abbr title="emphasis">em</abbr
-      >要素を用いることで文の一部を<em>強調</em>できる。
-      また、strong要素を用いた場合、「<strong
-        >注意:カエルを触った手で目をこすると炎症する恐れがあります。</strong
-      >
-      」のような重要度や緊急性の高い情報であることを示すことができます。
-      逆にメインの文章の内容ではない著作権表記や免責事項、ライセンスの帰属表示など小さく表示するべきことはsmall要素とする。<small
-        >(フッターに表記された著作権表記もsmall要素としています)</small
-      >
-    </p>
-
-    <h2>コンピュータやユーザーのための情報付与</h2>
-    <p>
-      HTMLはそれぞれの要素を識別するために、タグを付与する。
-      これによって、ユーザーのみならず、
-      コンピュータも文書の各部位が何を表すのかが分かる。
-      「文書の定義」で述べた内容も近いが、この他にtime要素などもある。
-      time要素は「<time datetime="02-01">二月一日</time>」のような
-      コンピュータが理解できないフォーマットの日時情報をHTMLファイル内に書き入れることが可能である。
-    </p>
-
-    <h2>箇条書き/表/画像等の挿入</h2>
-    <h3><abbr title="unordered list">ul</abbr>要素</h3>
-    <p>
-      箇条書きの項目一つ一つは、li要素でマークアップする。
-      そして、li要素の集まりをul要素とすると、以下のような箇条書きとなる。
-    </p>
-    <ul>
-      <li>項目1</li>
-      <li>項目2</li>
-      <li>項目3</li>
-    </ul>
-
-    <h3><abbr title="ordered list">ol</abbr>要素</h3>
-    <p>ol要素とすると、以下のような箇条書きとなる。</p>
-    <ol>
-      <li>項目1</li>
-      <li>項目2</li>
-      <li>項目3</li>
-    </ol>
-    <p>
-      また、ol要素の番号は逆順や開始番号を設定することや、
-      番号以外のものを添え字にすること、入れ子の箇条書きもできる。
-    </p>
-    <ol reversed start="5">
-      <li>項目1</li>
-      <li>項目2</li>
-      <li>項目3</li>
-    </ol>
-    <ol type="A">
-      <li>
-        <ol type="a">
-          <li>項目1-1</li>
-          <li>項目1-2</li>
-          <li>項目1-3</li>
-        </ol>
-      </li>
-      <li>項目2</li>
-      <li>
-        type="I"としたol要素
-        <ol type="I">
-          <li>項目3-1</li>
-          <li>項目3-2</li>
-          <ol type="i">
-            <li>項目3-3-1</li>
-            <li>項目3-3-2</li>
-            <li>項目3-3-3</li>
-          </ol>
-        </ol>
-      </li>
-    </ol>
-
-    <h3><abbr title="description list">dl</abbr>要素</h3>
-    <p>
-      dl要素は、説明リストをマークアップできる。
-      <abbr title="description listのterm">dt</abbr>要素で項目名を定義し、
-      <abbr title="description listのdescriptionまたはdefinition">dd</abbr>要素
-    </p>
-    <dl>
-      <dt>項目名1</dt>
-      <dd>項目名1の説明</dd>
-      <dt>項目名2</dt>
-      <dd>項目名2の説明1</dd>
-      <dd>項目名2の説明2</dd>
-    </dl>
-
-    <h3><abbr title="anchor">a</abbr>要素</h3>
-    <p>
-      HTMLといえば、リンクである。このリンクをマークアップするのが、a要素である。
-    </p>
-
-    <ul>
-      <li>
-        <a href="https://github.com/WFrog2511" target="_blank" rel="author"
-          >WFrog2511のGitHub(外部リンク)</a
-        >
-      </li>
-      <li>
-        <a href="./emptyPage.html">何もない</a>
-      </li>
-      <li>
-        <a href="#titleA">話題A</a>
-      </li>
-    </ul>
-
-    <h3>img要素</h3>
-    <p>
-      読み込み速度が驚異的な阿部寛のWebページでさえ、画像は埋め込まれている。画像は、img要素によってマークアップされる。
-      img要素はa要素に含めることでリンクにもできる。
-      また、width属性とheight属性を指定することで、画像を横に引き延ばすことも可能だ。
-    </p>
-    <figure>
-      <a href="https://github.com/WFrog2511" target="_blank">
-        <img src="./image/WFrog_icon.png" alt="" decoding="async" />
-      </a>
-      <img src="./image/WFrog_icon.png" width="500" height="100" alt="" />
-    </figure>
-
-    <h3>video要素</h3>
-    <p>
-      video要素を用いると以下のように、Webページ内に動画を埋め込むことも可能である。
-    </p>
-    <video loop autoplay width="800px">
-      <source src="./video/3d_animation.mp4" type="video/mp4" />
-      &gt;お使いのブラウザは埋め込み動画をサポートしていません&lt;
-    </video>
-
-    <h3><abbr title="inline frame">iframe</abbr>要素</h3>
-    <p>
-      iframe要素は、PDFや他のWebページ、Youtubeの動画などをWebページ埋め込むことができる。
-    </p>
-    <iframe src="./pdf/gimp.pdf" title="Gimpで作成したPDFファイル"></iframe>
-
-    <h3>表の挿入</h3>
-    <p>
-      表には、table要素を用います。さらに、表内の各行には<abbr title="table row"
-        >tr</abbr
-      >要素を用い、 表の見出しセル(最も上の行のセル)には<abbr
-        title="table header cell"
-        >th</abbr
-      >要素を用い、 その他のセルには<abbr title="table data cell">td</abbr
-      >要素を用いる。
-    </p>
-    <table>
-      <caption>
-        テーブルのキャプション
-      </caption>
-      <thead>
-        <tr>
-          <th>見出しのセル1</th>
-          <th>見出しのセル2</th>
-          <th>見出しのセル3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>内容セル1-1</td>
-          <td>内容セル1-2</td>
-          <td>内容セル1-3</td>
-        </tr>
-        <tr>
-          <td>内容セル2-1</td>
-          <td colspan="2">------内容セル2-23(2列分)-----</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">-----フッターのセル-----</td>
-          <td>フッターのセル</td>
-        </tr>
-      </tfoot>
-    </table>
-
-    <h2>入力フォーム</h2>
-    <p>
-      HTMLでは、前述した画像などの他に以下のような入力フォームを作ることも可能だ。
-    </p>
-    <form action="" method="post">
-      <p>
-        <label
-          >テキスト<input type="text" placeholder="プレースホルダー"
-        /></label>
-      </p>
-      <input type="password" />
-      <input type="tel" />
-      <input type="url" />
-      <input type="email" />
-      <input type="search" />
-      <input type="datetime-local" />
-      <input type="date" />
-      <input type="month" />
-      <input type="week" />
-      <input type="time" />
-      <input type="number" />
-      <input type="range" />
-      <input type="color" />
-      <input type="radio" />A <input type="radio" />B <input type="radio" />C
-      <input type="checkbox" />
-      <input type="submit" />
-      <input type="reset" />
-      <input type="button" />
-      <input type="image" src="./image/WFrog_icon.png" alt="WFrog_button" />
-      <input type="file" />
-      <input type="hidden" />
-      <p>
-        <label>
-          テキストエリア<br />
-          <textarea
-            name="message"
-            cols="30"
-            rows="10"
-            placeholder="テキストエリア"
-            required
+    <section>
+      <h1>HTMLの機能</h1>
+      <section>
+        <h2>文書の定義</h2>
+        <p>
+          HTMLは、各種要素で文書の各文字列が何を意味するか や
+          例としては、head要素内のmeta要素では文書ファイルの作者や文字コードを定義できる。
+          重要性、文書ファイルの形式などを定義する。
+          また、文書内の見出しはh要素を用いることで定義される。
+        </p>
+      </section>
+      <section>
+        <h2>単語の強調</h2>
+        <p>
+          HTMLでは、<abbr title="emphasis">em</abbr
+          >要素を用いることで文の一部を<em>強調</em>できる。
+          また、strong要素を用いた場合、「<strong
+            >注意:カエルを触った手で目をこすると炎症する恐れがあります。</strong
           >
+          」のような重要度や緊急性の高い情報であることを示すことができます。
+          逆にメインの文章の内容ではない著作権表記や免責事項、ライセンスの帰属表示など小さく表示するべきことはsmall要素とする。<small
+            >(フッターに表記された著作権表記もsmall要素としています)</small
+          >
+        </p>
+      </section>
+      <section>
+        <h2>コンピュータやユーザーのための情報付与</h2>
+        <p>
+          HTMLはそれぞれの要素を識別するために、タグを付与する。
+          これによって、ユーザーのみならず、
+          コンピュータも文書の各部位が何を表すのかが分かる。
+          「文書の定義」で述べた内容も近いが、この他にtime要素などもある。
+          time要素は「<time datetime="02-01">二月一日</time>」のような
+          コンピュータが理解できないフォーマットの日時情報をHTMLファイル内に書き入れることが可能である。
+        </p>
+      </section>
+      <section>
+        <h2>箇条書き/表/画像等の挿入</h2>
+        <section>
+          <h3><abbr title="unordered list">ul</abbr>要素</h3>
+          <p>
+            箇条書きの項目一つ一つは、li要素でマークアップする。
+            そして、li要素の集まりをul要素とすると、以下のような箇条書きとなる。
+          </p>
+          <ul>
+            <li>項目1</li>
+            <li>項目2</li>
+            <li>項目3</li>
+          </ul>
+        </section>
+        <section>
+          <h3><abbr title="ordered list">ol</abbr>要素</h3>
+          <p>ol要素とすると、以下のような箇条書きとなる。</p>
+          <ol>
+            <li>項目1</li>
+            <li>項目2</li>
+            <li>項目3</li>
+          </ol>
+          <p>
+            また、ol要素の番号は逆順や開始番号を設定することや、
+            番号以外のものを添え字にすること、入れ子の箇条書きもできる。
+          </p>
+          <ol reversed start="5">
+            <li>項目1</li>
+            <li>項目2</li>
+            <li>項目3</li>
+          </ol>
+          <ol type="A">
+            <li>
+              <ol type="a">
+                <li>項目1-1</li>
+                <li>項目1-2</li>
+                <li>項目1-3</li>
+              </ol>
+            </li>
+            <li>項目2</li>
+            <li>
+              type="I"としたol要素
+              <ol type="I">
+                <li>項目3-1</li>
+                <li>項目3-2</li>
+                <ol type="i">
+                  <li>項目3-3-1</li>
+                  <li>項目3-3-2</li>
+                  <li>項目3-3-3</li>
+                </ol>
+              </ol>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h3><abbr title="description list">dl</abbr>要素</h3>
+          <p>
+            dl要素は、説明リストをマークアップできる。
+            <abbr title="description listのterm">dt</abbr>要素で項目名を定義し、
+            <abbr title="description listのdescriptionまたはdefinition">dd</abbr
+            >要素
+          </p>
+          <dl>
+            <dt>項目名1</dt>
+            <dd>項目名1の説明</dd>
+            <dt>項目名2</dt>
+            <dd>項目名2の説明1</dd>
+            <dd>項目名2の説明2</dd>
+          </dl>
+        </section>
+        <section>
+          <h3><abbr title="anchor">a</abbr>要素</h3>
+          <p>
+            HTMLといえば、リンクである。このリンクをマークアップするのが、a要素である。
+          </p>
+
+          <ul>
+            <li>
+              <a
+                href="https://github.com/WFrog2511"
+                target="_blank"
+                rel="author"
+                >WFrog2511のGitHub(外部リンク)</a
+              >
+            </li>
+            <li>
+              <a href="./emptyPage.html">何もない</a>
+            </li>
+            <li>
+              <a href="#titleA">話題A</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>img要素</h3>
+          <p>
+            読み込み速度が驚異的な阿部寛のWebページでさえ、画像は埋め込まれている。画像は、img要素によってマークアップされる。
+            img要素はa要素に含めることでリンクにもできる。
+            また、width属性とheight属性を指定することで、画像を横に引き延ばすことも可能だ。
+          </p>
+          <figure>
+            <a href="https://github.com/WFrog2511" target="_blank">
+              <img src="./image/WFrog_icon.png" alt="" decoding="async" />
+            </a>
+            <img src="./image/WFrog_icon.png" width="500" height="100" alt="" />
+          </figure>
+        </section>
+        <section>
+          <h3>video要素</h3>
+          <p>
+            video要素を用いると以下のように、Webページ内に動画を埋め込むことも可能である。
+          </p>
+          <video loop autoplay width="800px">
+            <source src="./video/3d_animation.mp4" type="video/mp4" />
+            &gt;お使いのブラウザは埋め込み動画をサポートしていません&lt;
+          </video>
+        </section>
+        <section>
+          <h3><abbr title="inline frame">iframe</abbr>要素</h3>
+          <p>
+            iframe要素は、PDFや他のWebページ、Youtubeの動画などをWebページ埋め込むことができる。
+          </p>
+          <iframe
+            src="./pdf/gimp.pdf"
+            title="Gimpで作成したPDFファイル"
+          ></iframe>
+        </section>
+        <section>
+          <h3>表の挿入</h3>
+          <p>
+            表には、table要素を用います。さらに、表内の各行には<abbr
+              title="table row"
+              >tr</abbr
+            >要素を用い、 表の見出しセル(最も上の行のセル)には<abbr
+              title="table header cell"
+              >th</abbr
+            >要素を用い、 その他のセルには<abbr title="table data cell">td</abbr
+            >要素を用いる。
+          </p>
+          <table>
+            <caption>
+              テーブルのキャプション
+            </caption>
+            <thead>
+              <tr>
+                <th>見出しのセル1</th>
+                <th>見出しのセル2</th>
+                <th>見出しのセル3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>内容セル1-1</td>
+                <td>内容セル1-2</td>
+                <td>内容セル1-3</td>
+              </tr>
+              <tr>
+                <td>内容セル2-1</td>
+                <td colspan="2">------内容セル2-23(2列分)-----</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2">-----フッターのセル-----</td>
+                <td>フッターのセル</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </section>
+      <section>
+        <h2>入力フォーム</h2>
+        <p>
+          HTMLでは、前述した画像などの他に以下のような入力フォームを作ることも可能だ。
+        </p>
+        <form action="" method="post">
+          <p>
+            <label
+              >テキスト<input type="text" placeholder="プレースホルダー"
+            /></label>
+          </p>
+          <input type="password" />
+          <input type="tel" />
+          <input type="url" />
+          <input type="email" />
+          <input type="search" />
+          <input type="datetime-local" />
+          <input type="date" />
+          <input type="month" />
+          <input type="week" />
+          <input type="time" />
+          <input type="number" />
+          <input type="range" />
+          <input type="color" />
+          <input type="radio" />A <input type="radio" />B
+          <input type="radio" />C
+          <input type="checkbox" />
+          <input type="submit" />
+          <input type="reset" />
+          <input type="button" />
+          <input type="image" src="./image/WFrog_icon.png" alt="WFrog_button" />
+          <input type="file" />
+          <input type="hidden" />
+          <p>
+            <label>
+              テキストエリア<br />
+              <textarea
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="テキストエリア"
+                required
+              >
 メッセージ</textarea
-          ><br />
-        </label>
+              ><br />
+            </label>
 
-        <label>
-          セレクト<br />
-          <select name="area">
-            <optgroup label="ラベルグループ1">
-              <option value="1-1">選択肢1</option>
-              <option value="1-2" selected>選択肢2</option>
-              <option value="1-3">選択肢3</option>
-              <option value="1-4">選択肢4</option>
-            </optgroup>
-            <optgroup label="ラベルグループ2">
-              <option value="2-1">選択肢1</option>
-              <option value="2-2" selected>選択肢2</option>
-              <option value="2-3">選択肢3</option>
-              <option value="2-4">選択肢4</option>
-            </optgroup>
-          </select>
-          <br />
-        </label>
+            <label>
+              セレクト<br />
+              <select name="area">
+                <optgroup label="ラベルグループ1">
+                  <option value="1-1">選択肢1</option>
+                  <option value="1-2" selected>選択肢2</option>
+                  <option value="1-3">選択肢3</option>
+                  <option value="1-4">選択肢4</option>
+                </optgroup>
+                <optgroup label="ラベルグループ2">
+                  <option value="2-1">選択肢1</option>
+                  <option value="2-2" selected>選択肢2</option>
+                  <option value="2-3">選択肢3</option>
+                  <option value="2-4">選択肢4</option>
+                </optgroup>
+              </select>
+              <br />
+            </label>
 
-        <label>
-          複数セレクト<br />
-          <select name="area" multiple>
-            <optgroup label="ラベルグループ1">
-              <option value="1-1">選択肢1</option>
-              <option value="1-2" selected>選択肢2</option>
-              <option value="1-3">選択肢3</option>
-              <option value="1-4">選択肢4</option>
-            </optgroup>
-            <optgroup label="ラベルグループ2">
-              <option value="2-1">選択肢1</option>
-              <option value="2-2" selected>選択肢2</option>
-              <option value="2-3">選択肢3</option>
-              <option value="2-4">選択肢4</option>
-            </optgroup>
-          </select>
-        </label>
-      </p>
-    </form>
-
-    <h1>JavaScriptを用いた機能</h1>
-    <h2>入力形式の制限 と 未入力項目の指摘</h2>
-    <form><input /></form>
-
+            <label>
+              複数セレクト<br />
+              <select name="area" multiple>
+                <optgroup label="ラベルグループ1">
+                  <option value="1-1">選択肢1</option>
+                  <option value="1-2" selected>選択肢2</option>
+                  <option value="1-3">選択肢3</option>
+                  <option value="1-4">選択肢4</option>
+                </optgroup>
+                <optgroup label="ラベルグループ2">
+                  <option value="2-1">選択肢1</option>
+                  <option value="2-2" selected>選択肢2</option>
+                  <option value="2-3">選択肢3</option>
+                  <option value="2-4">選択肢4</option>
+                </optgroup>
+              </select>
+            </label>
+          </p>
+        </form>
+      </section>
+    </section>
     <footer>
       <p>
         〒100-2100<br />
